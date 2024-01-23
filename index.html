@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,572 @@
     <meta name="description" content="Simulador interactivo de javascript">
     <meta name="keywords" content="Simulador interactivo">
     <link rel="stylesheet" href="styles.css">
-    <title>Simulador interactivo</title>
+    <link href="https://fonts.cdnfonts.com/css/nordic-chance" rel="stylesheet">
+    <title>SkolBurger</title>
 </head>
 
 <body>
-    <script src="main.js"></script>
+    <header>
+        <nav>
+            <div id="centrarIcono">
+                <a href="index.html">
+                    <img src="img/icono-removebg-preview.png" alt="Icono de SkolBurger">
+                </a>
+                <a href="index.html">Skool Burger</a>
+            </div>
+
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Buscar...">
+                <button class="search-button">Buscar</button>
+            </div>
+            <ul id="btnNavegador">
+                <li><i id="horarios" class="fa-regular fa-calendar-days"></i></li>
+                <li><i class="fa-solid fa-cart-shopping"></i></li>
+                <li>
+                    <p>Idioma</p>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="horariosContenedor">
+            <div id="horariosLista">
+                <h1>Hora de atención</h1>
+                <div class="horarios-dias">
+                    <ul>
+                        <li>Lunes</li>
+                        <li>XX:XX</li>
+                    </ul>
+                </div>
+                <div class="horarios-dias">
+                    <ul>
+                        <li>Martes</li>
+                        <li>XX:XX</li>
+                    </ul>
+                </div>
+                <div class="horarios-dias">
+                    <ul>
+                        <li>Miercoles</li>
+                        <li>XX:XX</li>
+                    </ul>
+                </div>
+                <div class="horarios-dias">
+                    <ul>
+                        <li>Jueves</li>
+                        <li>XX:XX</li>
+                    </ul>
+                </div>
+                <div class="horarios-dias">
+                    <ul>
+                        <li>Viernes</li>
+                        <li>XX:XX</li>
+                    </ul>
+                </div>
+                <div class="horarios-dias">
+                    <ul>
+                        <li>Sabado</li>
+                        <li>XX:XX</li>
+                    </ul>
+                </div>
+                <div class="horarios-dias">
+                    <ul>
+                        <li>Domingo</li>
+                        <li>XX:XX</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div id="contenedorProductos">
+
+            <!-- filtro -->
+
+            <div id="contenedorFiltro">
+                <ul id="listaProductos">
+                    <li id="combos" onclick="mostrarContenedor('contenedorCombos', this)">Combos</li>
+                    <li id="soloBurguer" onclick="mostrarContenedor('contenedorSoloBurger', this)">Solo Burger</li>
+                    <li id="porcionesXL" onclick="mostrarContenedor('contenedorPorcionesXL', this)">Porciones XL</li>
+                    <li id="promos" onclick="mostrarContenedor('contenedorPromos', this)">Promos</li>
+                </ul>
+            </div>
+
+            <!-- contenedores de cartas productos combo -->
+
+            <div id="contenedorCombos" class="contenedorCartasProductos contenedor">
+                <!-- carta uno -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Cheese Burger Combo</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga,
+                                huevo frito, salsa big mac y papas fritas.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4100</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta dos -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Barba Roja Combo</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate,
+                                cebolla caramelizada, salsa barbacoa y papas fritas.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4600</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta tres -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/clasica.jpg" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Hamburguesa Clasica Combo</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso cheddar
+                                y
+                                papas fritas.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$3600</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta cuatro -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Cheese Burger Combo</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga,
+                                huevo frito, salsa big mac y papas fritas.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4100</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- quinto producto -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Barba Roja</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate,
+                                cebolla caramelizada, salsa barbacoa.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4600</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!---------------------------------------------------------------------------------->
+
+            <div id="contenedorSoloBurger" class="contenedorCartasProductos contenedor">
+                <!-- carta uno -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Cheese Burger</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga,
+                                huevo frito, salsa big mac.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4100</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta dos -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Barba Roja</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon,
+                                tomate,
+                                cebolla caramelizada, salsa barbacoa.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4600</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta tres -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/clasica.jpg" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Hamburguesa Clasica</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso
+                                cheddar.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$3600</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta cuatro -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Cheese Burger</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga,
+                                huevo frito, salsa big mac.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4100</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- quinto producto -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Barba Roja</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon,
+                                tomate,
+                                cebolla caramelizada, salsa barbacoa.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4600</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------------------------------------------------------------------------------->
+            <div id="contenedorPorcionesXL" class="contenedorCartasProductos contenedor">
+                <!-- carta uno -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Prueba 1</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga,
+                                huevo frito, salsa big mac.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4100</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta dos -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Prueba 1</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon,
+                                tomate,
+                                cebolla caramelizada, salsa barbacoa.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4600</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta tres -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/clasica.jpg" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Prueba 1</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso
+                                cheddar.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$3600</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta cuatro -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Prueba 1</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga,
+                                huevo frito, salsa big mac.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4100</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- quinto producto -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Prueba 1</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon,
+                                tomate,
+                                cebolla caramelizada, salsa barbacoa.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4600</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!----------------------------------------------------------------------------------------->
+            <div id="contenedorPromos" class="contenedorCartasProductos contenedor">
+                <!-- carta uno -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Prueba</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga,
+                                huevo frito, salsa big mac.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4100</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta dos -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Prueba</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon,
+                                tomate,
+                                cebolla caramelizada, salsa barbacoa.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4600</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta tres -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/clasica.jpg" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Hamburguesa Clasica</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso
+                                cheddar.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$3600</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- carta cuatro -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Prueba</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga,
+                                huevo frito, salsa big mac.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4100</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- quinto producto -->
+                <div class="carta-producto">
+                    <div class="contenedort-imagen-producto">
+                        <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X">
+                    </div>
+                    <div class="contenedor-titulo-descripcion">
+                        <div class="contenedor-titulo-producto">
+                            <h1>Prueba</h1>
+                        </div>
+                        <div class="descripcion-producto">
+                            <p>
+                                Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon,
+                                tomate,
+                                cebolla caramelizada, salsa barbacoa.
+                            </p>
+                        </div>
+                        <div class="contenedor-agregar">
+                            <p class="agregar">Agregar</p>
+                            <p class="precio">$4600</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="centrar-gift">
+                <img src="img/LqgM-unscreen.gif" alt="">
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div id="contenedorCentralFooter">
+            <div id="tituloFooter">
+                <h2>Skool Burger</h2>
+            </div>
+            <div id="descripcion">
+                <p>⚔️Bienvenido al festín vikingo de las hamburguesas ¡Sabores audaces, mordiscos legendarios!⚔️</p>
+            </div>
+            <div id="redes">
+                <a href="https://www.instagram.com/skol_burguer/" target="_blank">Siguenos en Instagram <i
+                        class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/fcf6a0acd3.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

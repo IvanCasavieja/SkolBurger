@@ -1,0 +1,357 @@
+@import url('https://fonts.cdnfonts.com/css/nordic-chance');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+body {
+    background: url(img/fondo.jpeg);
+}
+
+/* navegador de la pagina */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+#centrarIcono {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#centrarIcono a {
+    font-family: 'Nordic Chance', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+.search-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    padding: 10px;
+    border: 2px solid #ffa500;
+    /* Color anaranjado */
+    border-radius: 5px;
+    outline: none;
+    width: 80%;
+}
+
+.search-button {
+    background-color: #ffa500;
+    /* Color anaranjado */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.search-button:hover {
+    background-color: #ff7f00;
+    /* Color anaranjado más oscuro al pasar el ratón */
+}
+
+nav #btnNavegador {
+    width: 30%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 60px;
+    padding-right: 30px;
+}
+
+nav #btnNavegador li i {
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    color: white;
+}
+
+nav #btnNavegador li i:hover {
+    background: white;
+    color: black;
+}
+
+nav #btnNavegador li p {
+    position: relative;
+    cursor: pointer;
+    color: white;
+}
+
+nav #btnNavegador li p::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: white;
+    width: 0px;
+    bottom: 0px;
+    transition: .5s;
+}
+
+nav #btnNavegador li p:hover:before {
+    width: 100%;
+}
+
+#horariosContenedor {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 101;
+}
+
+#horariosLista {
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.horarios-dias {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+}
+
+.horarios-dias ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+}
+
+/* main */
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 1000px;
+    align-items: center;
+}
+
+main #contenedorProductos {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    width: 80%;
+    height: 900px;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedorProductos #contenedorFiltro {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#contenedorProductos #contenedorFiltro ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#contenedorProductos #contenedorFiltro ul li {
+    cursor: pointer;
+    width: 100%;
+    border-right: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+#contenedorProductos #contenedorFiltro ul #promos {
+    border: none;
+    border-radius: 0px 8px 0px 0;
+}
+
+.contenedorCartasProductos {
+    width: 100%;
+    height: calc(100% - 40px);
+    border-radius: 8px;
+    padding: 40px 0px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1500px;
+}
+
+.carta-producto {
+    width: 550px;
+    height: 160px;
+    display: flex;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.contenedort-imagen-producto {
+    border-radius: 8px;
+    height: 100%;
+}
+
+.contenedort-imagen-producto img {
+    border-radius: 8px;
+    width: 160px;
+    height: 160px;
+}
+
+.contenedor-titulo-descripcion {
+    display: flex;
+    flex-direction: column;
+}
+
+.descripcion-producto,
+.contenedor-titulo-producto {
+    padding: 0px 10px;
+}
+
+.contenedor-titulo-producto h1 {
+    font-size: 20px;
+}
+
+.descripcion-producto p {
+    font-size: 15px;
+}
+
+.contenedor-agregar {
+    display: flex;
+    width: 80%;
+    margin-top: 15px;
+    justify-content: space-around;
+}
+
+.contenedor-agregar .agregar {
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    margin-left: 10px;
+}
+
+.contenedor-agregar .agregar::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    background: black;
+    width: 0px;
+    bottom: 0px;
+    transition: .5s;
+}
+
+.contenedor-agregar .agregar:hover::before {
+    width: 100%;
+}
+
+.precio {
+    font-size: 18px;
+}
+
+.contenedor {
+    display: none;
+}
+
+.seleccionado {
+    background-color: rgba(143, 143, 143, 0.678);
+}
+
+.centrar-gift {
+    display: flex;
+    position: absolute;
+    top: 800px;
+    left: 200px;
+}
+
+#contenedorCentralFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    background: black;
+    gap: 10px;
+}
+
+#tituloFooter {
+    width: 200px;
+    text-align: center;
+}
+
+#tituloFooter h2 {
+    font-family: 'Nordic Chance', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+#descripcion {
+    width: 400px;
+    text-align: center;
+}
+
+#descripcion p {
+    color: white;
+    font-size: 15px;
+}
+
+#redes {
+    width: 250px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+#redes a {
+    color: white;
+    font-size: 20px;
+}
+
+#redes a i {
+    color: white;
+    font-size: 25px;
+    margin-left: 10px;
+}
