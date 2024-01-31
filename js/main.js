@@ -58,15 +58,52 @@ mostrarContenedor("contenedorCombos", document.getElementById("combos"));
 
 /* --------------------------------------------------------------------------- */
 
-let botonesAgregar = document.getElementsByClassName("agregarCheeseBurger")
-let contenedorCheeseBurger = document.querySelector(".cheeseburger")
+/* BOTONES DE AGREGADO */
+let agregarCheeseBurger = document.querySelector("#agregarCheeseBurger");
+let agregarBarbaRoja = document.querySelector("#agregarBarbaRoja");
+let agregarClasica = document.querySelector("#agregarClasica");
 
-for (let boton of botonesAgregar) {
-  boton.addEventListener("click", contenedorSinIngredientes);
+/* CONTENEDOR TOTAL */
+let contenedorSinIngredientes = document.getElementById("eleccion-ingredientes");
 
-  function contenedorSinIngredientes(){
-    contenedorCheeseBurger.style.display="block"
-  }
+/* CONTENEDORES */
+let cheeseContainer = document.getElementById("cheese");
+let barbaRojaContainer = document.getElementById("barbaRoja");
+let comunContainer = document.getElementById("comun");
+
+/* cruz para cerrar */
+let cruzCerrar = document.getElementsByClassName("contenedorCruz");
+
+/* funciones y eventos */
+agregarCheeseBurger.addEventListener("click", function () {
+  mostrarContenedorDeIngredientes(cheeseContainer);
+});
+
+agregarBarbaRoja.addEventListener("click", function () {
+  mostrarContenedorDeIngredientes(barbaRojaContainer);
+});
+
+agregarClasica.addEventListener("click", function () {
+  mostrarContenedorDeIngredientes(comunContainer);
+});
+
+function mostrarContenedorDeIngredientes(contenedor) {
+  // Ocultar todos los contenedores antes de mostrar el deseado
+  cheeseContainer.style.display = "none";
+  barbaRojaContainer.style.display = "none";
+  comunContainer.style.display = "none";
+
+  // Mostrar el contenedor
+  contenedor.style.display = "flex";
+  contenedorSinIngredientes.style.display = "flex";
 }
 
 
+let botonCruz;
+
+for (botonCruz of cruzCerrar) {
+  botonCruz.addEventListener("click", cerrarContenedorIngredientes);
+}
+function cerrarContenedorIngredientes() {
+  contenedorSinIngredientes.style.display = "none";
+}

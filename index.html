@@ -1,112 +1,112 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Ivan Casavieja" />
-    <meta name="description" content="Simulador interactivo de javascript" />
-    <meta name="keywords" content="Simulador interactivo" />
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.cdnfonts.com/css/nordic-chance" rel="stylesheet" />
-    <title>SkolBurger</title>
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <div id="centrarIcono">
-          <a href="index.html">
-            <img src="img/icono-removebg-preview.png" alt="Icono de SkolBurger" />
-          </a>
-          <a href="index.html">Skool Burger</a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Ivan Casavieja" />
+  <meta name="description" content="Simulador interactivo de javascript" />
+  <meta name="keywords" content="Simulador interactivo" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.cdnfonts.com/css/nordic-chance" rel="stylesheet" />
+  <title>SkolBurger</title>
+</head>
 
-        <div class="search-container">
-          <input type="text" class="search-input" placeholder="Buscar..." />
-          <button class="search-button">Buscar</button>
-        </div>
-        <ul id="btnNavegador">
-          <li><i id="horarios" class="fa-regular fa-calendar-days"></i></li>
-          <li><i class="fa-solid fa-cart-shopping"></i></li>
-          <li>
-            <p>Idioma</p>
-          </li>
-        </ul>
-      </nav>
-
-      <div id="horariosContenedor">
-        <div id="horariosLista">
-          <h1>Hora de atención</h1>
-          <div class="horarios-dias">
-            <ul>
-              <li>Lunes</li>
-              <li>XX:XX</li>
-            </ul>
-          </div>
-          <div class="horarios-dias">
-            <ul>
-              <li>Martes</li>
-              <li>XX:XX</li>
-            </ul>
-          </div>
-          <div class="horarios-dias">
-            <ul>
-              <li>Miercoles</li>
-              <li>XX:XX</li>
-            </ul>
-          </div>
-          <div class="horarios-dias">
-            <ul>
-              <li>Jueves</li>
-              <li>XX:XX</li>
-            </ul>
-          </div>
-          <div class="horarios-dias">
-            <ul>
-              <li>Viernes</li>
-              <li>XX:XX</li>
-            </ul>
-          </div>
-          <div class="horarios-dias">
-            <ul>
-              <li>Sabado</li>
-              <li>XX:XX</li>
-            </ul>
-          </div>
-          <div class="horarios-dias">
-            <ul>
-              <li>Domingo</li>
-              <li>XX:XX</li>
-            </ul>
-          </div>
-        </div>
+<body>
+  <header>
+    <nav>
+      <div id="centrarIcono">
+        <a href="index.html">
+          <img src="img/icono-removebg-preview.png" alt="Icono de SkolBurger" />
+        </a>
+        <a href="index.html">Skool Burger</a>
       </div>
-    </header>
-    <main>
-      <div id="contenedorProductos">
-        <!-- filtro -->
 
-        <div id="contenedorFiltro">
-          <ul id="listaProductos">
-            <li id="combos" onclick="mostrarContenedor('contenedorCombos', this)">Combos</li>
-            <li id="soloBurguer" onclick="mostrarContenedor('contenedorSoloBurger', this)">Solo Burger</li>
-            <li id="porcionesXL" onclick="mostrarContenedor('contenedorPorcionesXL', this)">Porciones XL</li>
-            <li id="promos" onclick="mostrarContenedor('contenedorPromos', this)">Promos</li>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Buscar..." />
+        <button class="search-button">Buscar</button>
+      </div>
+      <ul id="btnNavegador">
+        <li><i id="horarios" class="fa-regular fa-calendar-days"></i></li>
+        <li><i class="fa-solid fa-cart-shopping"></i></li>
+        <li>
+          <p>Idioma</p>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="horariosContenedor">
+      <div id="horariosLista">
+        <h1>Hora de atención</h1>
+        <div class="horarios-dias">
+          <ul>
+            <li>Lunes</li>
+            <li>XX:XX</li>
           </ul>
         </div>
+        <div class="horarios-dias">
+          <ul>
+            <li>Martes</li>
+            <li>XX:XX</li>
+          </ul>
+        </div>
+        <div class="horarios-dias">
+          <ul>
+            <li>Miercoles</li>
+            <li>XX:XX</li>
+          </ul>
+        </div>
+        <div class="horarios-dias">
+          <ul>
+            <li>Jueves</li>
+            <li>XX:XX</li>
+          </ul>
+        </div>
+        <div class="horarios-dias">
+          <ul>
+            <li>Viernes</li>
+            <li>XX:XX</li>
+          </ul>
+        </div>
+        <div class="horarios-dias">
+          <ul>
+            <li>Sabado</li>
+            <li>XX:XX</li>
+          </ul>
+        </div>
+        <div class="horarios-dias">
+          <ul>
+            <li>Domingo</li>
+            <li>XX:XX</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="contenedorProductos">
+      <!-- filtro -->
 
-        <!-- contenedores de eleccion de ingredientes -->
+      <div id="contenedorFiltro">
+        <ul id="listaProductos">
+          <li id="combos" onclick="mostrarContenedor('contenedorCombos', this)">Combos</li>
+          <li id="soloBurguer" onclick="mostrarContenedor('contenedorSoloBurger', this)">Solo Burger</li>
+          <li id="porcionesXL" onclick="mostrarContenedor('contenedorPorcionesXL', this)">Porciones XL</li>
+          <li id="promos" onclick="mostrarContenedor('contenedorPromos', this)">Promos</li>
+        </ul>
+      </div>
 
-        <div class="eleccion-ingredientes cheeseburger">
-            <div class="contenedorDescripcionIngredientes">
-                <h1>Cheese Burger</h1>
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa big mac y papas fritas.</p>
-            </div>
-            <div class="contenedorCruz">
-                <p>X</p>
-            </div>
-          <div class="contenedorImgGorrito">
-            <img src="img/cascovikingo.png" alt="" />
+      <!-- contenedores de eleccion de ingredientes -->
+
+      <div id="eleccion-ingredientes">
+        <div id="cheese">
+          <div class="contenedorDescripcionIngredientes">
+            <h1>Cheese Burger</h1>
+            <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa big
+              mac y papas fritas.</p>
+          </div>
+          <div class="contenedorCruz">
+            <p class="cerrarIngredientes">X</p>
           </div>
           <div class="contenedor-ingrediente">
             <label for="checkboxLechuga">Sin lechuga</label>
@@ -125,377 +125,182 @@
             <input type="checkbox" name="huevo" id="checkboxHuevo" />
           </div>
           <div class="contenedor-ingrediente">
-              <label for="checkboxSalsa">Sin salsa</label>
-              <input type="checkbox" name="salsa" id="checkboxSalsa" />
-          </div>
-          <div class="contenedorBtn"><button id="agregarBoton" type="button">Agregar</button></div>
-        </div>
-
-        <!-- contenedores de cartas productos combo -->
-
-        <div id="contenedorCombos" class="contenedorCartasProductos contenedor">
-          <!-- carta uno -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Cheese Burger Combo</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa big mac y papas fritas.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar agregarCheeseBurger">Agregar</p>
-                <p class="precio">$4100</p>
-              </div>
-            </div>
-          </div>
-          <!-- carta dos -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Barba Roja Combo</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla caramelizada, salsa barbacoa y papas fritas.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar agreegarBarbaRoja">Agregar</p>
-                <p class="precio">$4600</p>
-              </div>
-            </div>
-          </div>
-          <!-- carta tres -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/clasica.jpg" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Hamburguesa Clasica Combo</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso cheddar y papas fritas.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar agregarClasica">Agregar</p>
-                <p class="precio">$3600</p>
-              </div>
-            </div>
-          </div>
-
-        <!---------------------------------------------------------------------------------->
-
-        <div id="contenedorSoloBurger" class="contenedorCartasProductos contenedor">
-          <!-- carta uno -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Cheese Burger</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa big mac.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4100</p>
-              </div>
-            </div>
-          </div>
-          <!-- carta dos -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Barba Roja</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla caramelizada, salsa barbacoa.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4600</p>
-              </div>
-            </div>
-          </div>
-          <!-- carta tres -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/clasica.jpg" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Hamburguesa Clasica</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso cheddar.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$3600</p>
-              </div>
-            </div>
-          </div>
-          <!-- carta cuatro -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Cheese Burger</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa big mac.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4100</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- quinto producto -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Barba Roja</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla caramelizada, salsa barbacoa.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4600</p>
-              </div>
-            </div>
+            <label for="checkboxSalsa">Sin salsa</label>
+            <input type="checkbox" name="salsa" id="checkboxSalsa" />
           </div>
         </div>
 
-        <!----------------------------------------------------------------------------------------->
-        <div id="contenedorPorcionesXL" class="contenedorCartasProductos contenedor">
-          <!-- carta uno -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Prueba 1</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa big mac.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4100</p>
-              </div>
-            </div>
-          </div>
-          <!-- carta dos -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Prueba 1</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla caramelizada, salsa barbacoa.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4600</p>
-              </div>
-            </div>
-          </div>
-          <!-- carta tres -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/clasica.jpg" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Prueba 1</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso cheddar.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$3600</p>
-              </div>
-            </div>
-          </div>
-          <!-- carta cuatro -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Prueba 1</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa big mac.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4100</p>
-              </div>
-            </div>
-          </div>
 
-          <!-- quinto producto -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Prueba 1</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla caramelizada, salsa barbacoa.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4600</p>
-              </div>
-            </div>
+        <!-- barba roja -->
+
+        <div id="barbaRoja">
+          <div class="contenedorDescripcionIngredientes">
+            <h1>Barba Roja</h1>
+            <p>Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla
+              caramelizada, salsa barbacoa y papas fritas.</p>
+          </div>
+          <div class="contenedorCruz">
+            <p class="cerrarIngredientes">X</p>
+          </div>
+          <div class="contenedor-ingrediente">
+            <label for="checkboxLechuga">Sin lechuga</label>
+            <input type="checkbox" name="lechuga" id="checkboxLechuga" />
+          </div>
+          <div class="contenedor-ingrediente">
+            <label for="checkboxTomate">Sin tomate</label>
+            <input type="checkbox" name="tomate" id="checkboxTomate" />
+          </div>
+          <div class="contenedor-ingrediente">
+            <label for="checkboxQueso">Sin queso</label>
+            <input type="checkbox" name="queso" id="checkboxQueso" />
+          </div>
+          <div class="contenedor-ingrediente">
+            <label for="checkboxHuevo">Sin huevo</label>
+            <input type="checkbox" name="huevo" id="checkboxHuevo" />
+          </div>
+          <div class="contenedor-ingrediente">
+            <label for="checkboxSalsa">Sin salsa</label>
+            <input type="checkbox" name="salsa" id="checkboxSalsa" />
           </div>
         </div>
 
-        <!----------------------------------------------------------------------------------------->
-        <div id="contenedorPromos" class="contenedorCartasProductos contenedor">
-          <!-- carta uno -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Prueba</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa big mac.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4100</p>
-              </div>
-            </div>
-          </div>
-          <!-- carta dos -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Prueba</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla caramelizada, salsa barbacoa.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4600</p>
-              </div>
-            </div>
-          </div>
-          <!-- carta tres -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/clasica.jpg" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Hamburguesa Clasica</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso cheddar.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$3600</p>
-              </div>
-            </div>
-          </div>
-          <!-- carta cuatro -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Prueba</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa big mac.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4100</p>
-              </div>
-            </div>
-          </div>
+        <!-- comun -->
 
-          <!-- quinto producto -->
-          <div class="carta-producto">
-            <div class="contenedort-imagen-producto">
-              <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X" />
-            </div>
-            <div class="contenedor-titulo-descripcion">
-              <div class="contenedor-titulo-producto">
-                <h1>Prueba</h1>
-              </div>
-              <div class="descripcion-producto">
-                <p>Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla caramelizada, salsa barbacoa.</p>
-              </div>
-              <div class="contenedor-agregar">
-                <p class="agregar">Agregar</p>
-                <p class="precio">$4600</p>
-              </div>
-            </div>
+        <div id="comun">
+          <div class="contenedorDescripcionIngredientes">
+            <h1>Comun</h1>
+            <p>Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso cheddar y papas
+              fritas.</p>
+          </div>
+          <div class="contenedorCruz">
+            <p class="cerrarIngredientes">X</p>
+          </div>
+          <div class="contenedor-ingrediente">
+            <label for="checkboxLechuga">Sin lechuga</label>
+            <input type="checkbox" name="lechuga" id="checkboxLechuga" />
+          </div>
+          <div class="contenedor-ingrediente">
+            <label for="checkboxTomate">Sin tomate</label>
+            <input type="checkbox" name="tomate" id="checkboxTomate" />
+          </div>
+          <div class="contenedor-ingrediente">
+            <label for="checkboxQueso">Sin queso</label>
+            <input type="checkbox" name="queso" id="checkboxQueso" />
+          </div>
+          <div class="contenedor-ingrediente">
+            <label for="checkboxHuevo">Sin huevo</label>
+            <input type="checkbox" name="huevo" id="checkboxHuevo" />
+          </div>
+          <div class="contenedor-ingrediente">
+            <label for="checkboxSalsa">Sin salsa</label>
+            <input type="checkbox" name="salsa" id="checkboxSalsa" />
           </div>
         </div>
 
-        <div class="centrar-gift">
-          <img src="img/LqgM-unscreen.gif" alt="" />
+
+        <div class="contenedorBtn"><button id="agregarBoton" type="button">Agregar</button></div>
+      </div>
+
+      <!-- contenedores de cartas productos combo -->
+
+      <div id="contenedorCombos" class="contenedorCartasProductos contenedor">
+        <!-- carta uno -->
+        <div class="carta-producto">
+          <div class="contenedort-imagen-producto">
+            <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X" />
+          </div>
+          <div class="contenedor-titulo-descripcion">
+            <div class="contenedor-titulo-producto">
+              <h1>Cheese Burger Combo</h1>
+            </div>
+            <div class="descripcion-producto">
+              <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa
+                big mac y papas fritas.</p>
+            </div>
+            <div class="contenedor-agregar">
+              <p class="agregar" id="agregarCheeseBurger">Agregar</p>
+              <p class="precio">$4100</p>
+            </div>
+          </div>
+        </div>
+        <!-- carta dos -->
+        <div class="carta-producto">
+          <div class="contenedort-imagen-producto">
+            <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X" />
+          </div>
+          <div class="contenedor-titulo-descripcion">
+            <div class="contenedor-titulo-producto">
+              <h1>Barba Roja Combo</h1>
+            </div>
+            <div class="descripcion-producto">
+              <p>Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla
+                caramelizada, salsa barbacoa y papas fritas.</p>
+            </div>
+            <div class="contenedor-agregar">
+              <p class="agregar" id="agregarBarbaRoja">Agregar</p>
+              <p class="precio">$4600</p>
+            </div>
+          </div>
+        </div>
+        <!-- carta tres -->
+        <div class="carta-producto">
+          <div class="contenedort-imagen-producto">
+            <img src="img/clasica.jpg" alt="Imagen de hamburguesa X" />
+          </div>
+          <div class="contenedor-titulo-descripcion">
+            <div class="contenedor-titulo-producto">
+              <h1>Hamburguesa Clasica Combo</h1>
+            </div>
+            <div class="descripcion-producto">
+              <p>Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso cheddar y papas
+                fritas.</p>
+            </div>
+            <div class="contenedor-agregar">
+              <p class="agregar" id="agregarClasica">Agregar</p>
+              <p class="precio">$3600</p>
+            </div>
+          </div>
         </div>
       </div>
-    </main>
-    <footer>
-      <div id="contenedorCentralFooter">
-        <div id="tituloFooter">
-          <h2>Skool Burger</h2>
-        </div>
-        <div id="descripcion">
-          <p>⚔️Bienvenido al festín vikingo de las hamburguesas ¡Sabores audaces, mordiscos legendarios!⚔️</p>
-        </div>
-        <div id="redes">
-          <a href="https://www.instagram.com/skol_burguer/" target="_blank">Siguenos en Instagram <i class="fa-brands fa-instagram"></i></a>
-        </div>
-      </div>
-    </footer>
+      
+      <!---------------------------------------------------------------------------------->
 
-    <script src="https://kit.fontawesome.com/fcf6a0acd3.js" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-    <script src="js/productos.js"></script>
-  </body>
+      <div id="contenedorSoloBurger" class="contenedorCartasProductos contenedor">
+      </div>
+      <!---------------------------------------------------------------------------------->
+
+      <div id="contenedorPorcionesXL" class="contenedorCartasProductos contenedor">
+      </div>
+
+      <!---------------------------------------------------------------------------------->
+
+      <div id="contenedorPromos" class="contenedorCartasProductos contenedor">
+      </div>
+
+      <!---------------------------------------------------------------------------------->
+
+      <div class="centrar-gift">
+        <img src="img/LqgM-unscreen.gif" alt="" />
+      </div>
+  </main>
+  <footer>
+    <div id="contenedorCentralFooter">
+      <div id="tituloFooter">
+        <h2>Skool Burger</h2>
+      </div>
+      <div id="descripcion">
+        <p>⚔️Bienvenido al festín vikingo de las hamburguesas ¡Sabores audaces, mordiscos legendarios!⚔️</p>
+      </div>
+      <div id="redes">
+        <a href="https://www.instagram.com/skol_burguer/" target="_blank">Siguenos en Instagram <i
+            class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/fcf6a0acd3.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+  <script src="js/productos.js"></script>
+</body>
+
 </html>
