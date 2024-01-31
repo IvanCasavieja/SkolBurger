@@ -58,3 +58,15 @@ mostrarContenedor("contenedorCombos", document.getElementById("combos"));
 
 /* --------------------------------------------------------------------------- */
 
+let botonesAgregar = document.getElementsByClassName("agregarCheeseBurger")
+let contenedorCheeseBurger = document.querySelector(".cheeseburger")
+
+for (let boton of botonesAgregar) {
+  boton.addEventListener("click", contenedorSinIngredientes);
+
+  function contenedorSinIngredientes(){
+    contenedorCheeseBurger.style.display="block"
+  }
+}
+
+
