@@ -9,6 +9,7 @@
   <meta name="keywords" content="Simulador interactivo" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.cdnfonts.com/css/nordic-chance" rel="stylesheet" />
+  <script src="js/productos.js"></script>
   <title>SkolBurger</title>
 </head>
 
@@ -101,7 +102,7 @@
       <div id="eleccion-ingredientes">
         <div id="cheese">
           <div class="contenedorDescripcionIngredientes">
-            <h1>Cheese Burger</h1>
+            <h1 id="nombreCheese">Cheese Burger</h1>
             <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa big
               mac y papas fritas.</p>
           </div>
@@ -109,24 +110,24 @@
             <p class="cerrarIngredientes">X</p>
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxLechuga">Sin lechuga</label>
-            <input type="checkbox" name="lechuga" id="checkboxLechuga" />
+            <label for="checkboxLechugaCheese">Sin lechuga</label>
+            <input type="checkbox" id="checkboxLechugaCheese" name="checkboxLechuga" class="checkboxLechuga" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxTomate">Sin tomate</label>
-            <input type="checkbox" name="tomate" id="checkboxTomate" />
+            <label for="checkboxTomateCheese">Sin tomate</label>
+            <input type="checkbox" id="checkboxTomateCheese" name="tomate" class="checkboxTomate" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxQueso">Sin queso</label>
-            <input type="checkbox" name="queso" id="checkboxQueso" />
+            <label for="checkboxQuesoCheese">Sin queso</label>
+            <input type="checkbox" id="checkboxQuesoCheese" name="queso" class="checkboxQueso" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxHuevo">Sin huevo</label>
-            <input type="checkbox" name="huevo" id="checkboxHuevo" />
+            <label for="checkboxHuevoCheese">Sin huevo</label>
+            <input type="checkbox" id="checkboxHuevoCheese" name="huevo" class="checkboxHuevo" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxSalsa">Sin salsa</label>
-            <input type="checkbox" name="salsa" id="checkboxSalsa" />
+            <label for="checkboxSalsaCheese">Sin salsa</label>
+            <input type="checkbox" id="checkboxSalsaCheese" name="salsa" class="checkboxSalsa" />
           </div>
         </div>
 
@@ -135,7 +136,7 @@
 
         <div id="barbaRoja">
           <div class="contenedorDescripcionIngredientes">
-            <h1>Barba Roja</h1>
+            <h1 id="nombreBarbaRoja">Barba Roja</h1>
             <p>Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla
               caramelizada, salsa barbacoa y papas fritas.</p>
           </div>
@@ -143,24 +144,24 @@
             <p class="cerrarIngredientes">X</p>
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxLechuga">Sin lechuga</label>
-            <input type="checkbox" name="lechuga" id="checkboxLechuga" />
+            <label for="checkboxLechugaBarbaRoja">Sin lechuga</label>
+            <input type="checkbox" id="checkboxLechugaBarbaRoja" name="lechuga" class="checkboxLechuga" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxTomate">Sin tomate</label>
-            <input type="checkbox" name="tomate" id="checkboxTomate" />
+            <label for="checkboxTomateBarbaRoja">Sin tomate</label>
+            <input type="checkbox" id="checkboxTomateBarbaRoja" name="tomate" class="checkboxTomate" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxQueso">Sin queso</label>
-            <input type="checkbox" name="queso" id="checkboxQueso" />
+            <label for="checkboxQuesoBarbaRoja">Sin queso</label>
+            <input type="checkbox" id="checkboxQuesoBarbaRoja" name="queso" class="checkboxQueso" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxHuevo">Sin huevo</label>
-            <input type="checkbox" name="huevo" id="checkboxHuevo" />
+            <label for="checkboxHuevoBarbaRoja">Sin huevo</label>
+            <input type="checkbox" id="checkboxHuevoBarbaRoja" name="huevo" class="checkboxHuevo" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxSalsa">Sin salsa</label>
-            <input type="checkbox" name="salsa" id="checkboxSalsa" />
+            <label for="checkboxSalsaBarbaRoja">Sin salsa</label>
+            <input type="checkbox" id="checkboxSalsaBarbaRoja" name="salsa" class="checkboxSalsa" />
           </div>
         </div>
 
@@ -168,7 +169,7 @@
 
         <div id="comun">
           <div class="contenedorDescripcionIngredientes">
-            <h1>Comun</h1>
+            <h1 id="nombreClasica">Comun</h1>
             <p>Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso cheddar y papas
               fritas.</p>
           </div>
@@ -176,24 +177,24 @@
             <p class="cerrarIngredientes">X</p>
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxLechuga">Sin lechuga</label>
-            <input type="checkbox" name="lechuga" id="checkboxLechuga" />
+            <label for="checkboxLechugaComun">Sin lechuga</label>
+            <input type="checkbox" id="checkboxLechugaComun" name="lechuga" class="checkboxLechuga" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxTomate">Sin tomate</label>
-            <input type="checkbox" name="tomate" id="checkboxTomate" />
+            <label for="checkboxTomateComun">Sin tomate</label>
+            <input type="checkbox" id="checkboxTomateComun" name="tomate" class="checkboxTomate" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxQueso">Sin queso</label>
-            <input type="checkbox" name="queso" id="checkboxQueso" />
+            <label for="checkboxQuesoComun">Sin queso</label>
+            <input type="checkbox" id="checkboxQuesoComun" name="queso" class="checkboxQueso" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxHuevo">Sin huevo</label>
-            <input type="checkbox" name="huevo" id="checkboxHuevo" />
+            <label for="checkboxHuevoComun">Sin huevo</label>
+            <input type="checkbox" id="checkboxHuevoComun" name="huevo" class="checkboxHuevo" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxSalsa">Sin salsa</label>
-            <input type="checkbox" name="salsa" id="checkboxSalsa" />
+            <label for="checkboxSalsaComun">Sin salsa</label>
+            <input type="checkbox" id="checkboxSalsaComun" name="salsa" class="checkboxSalsa" />
           </div>
         </div>
 
@@ -204,65 +205,8 @@
       <!-- contenedores de cartas productos combo -->
 
       <div id="contenedorCombos" class="contenedorCartasProductos contenedor">
-        <!-- carta uno -->
-        <div class="carta-producto">
-          <div class="contenedort-imagen-producto">
-            <img src="img/cheeseburger.webp" alt="Imagen de hamburguesa X" />
-          </div>
-          <div class="contenedor-titulo-descripcion">
-            <div class="contenedor-titulo-producto">
-              <h1>Cheese Burger Combo</h1>
-            </div>
-            <div class="descripcion-producto">
-              <p>Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa
-                big mac y papas fritas.</p>
-            </div>
-            <div class="contenedor-agregar">
-              <p class="agregar" id="agregarCheeseBurger">Agregar</p>
-              <p class="precio">$4100</p>
-            </div>
-          </div>
-        </div>
-        <!-- carta dos -->
-        <div class="carta-producto">
-          <div class="contenedort-imagen-producto">
-            <img src="img/barbaroja.webp" alt="Imagen de hamburguesa X" />
-          </div>
-          <div class="contenedor-titulo-descripcion">
-            <div class="contenedor-titulo-producto">
-              <h1>Barba Roja Combo</h1>
-            </div>
-            <div class="descripcion-producto">
-              <p>Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla
-                caramelizada, salsa barbacoa y papas fritas.</p>
-            </div>
-            <div class="contenedor-agregar">
-              <p class="agregar" id="agregarBarbaRoja">Agregar</p>
-              <p class="precio">$4600</p>
-            </div>
-          </div>
-        </div>
-        <!-- carta tres -->
-        <div class="carta-producto">
-          <div class="contenedort-imagen-producto">
-            <img src="img/clasica.jpg" alt="Imagen de hamburguesa X" />
-          </div>
-          <div class="contenedor-titulo-descripcion">
-            <div class="contenedor-titulo-producto">
-              <h1>Hamburguesa Clasica Combo</h1>
-            </div>
-            <div class="descripcion-producto">
-              <p>Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso cheddar y papas
-                fritas.</p>
-            </div>
-            <div class="contenedor-agregar">
-              <p class="agregar" id="agregarClasica">Agregar</p>
-              <p class="precio">$3600</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
+      </div> 
+
       <!---------------------------------------------------------------------------------->
 
       <div id="contenedorSoloBurger" class="contenedorCartasProductos contenedor">
@@ -298,9 +242,9 @@
     </div>
   </footer>
 
+
   <script src="https://kit.fontawesome.com/fcf6a0acd3.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
-  <script src="js/productos.js"></script>
 </body>
 
 </html>
