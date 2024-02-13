@@ -162,6 +162,20 @@ nav #btnNavegador li p:hover:before {
     width: 100%;
 }
 
+#carritoContenedor{
+    height: 80vh;
+    background-color: white;
+    border-radius: 8px;
+    width: 300px;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    right: 2%;
+    top: 15%;
+    border: 1px solid black;
+}
+
 /* main */
 
 main {

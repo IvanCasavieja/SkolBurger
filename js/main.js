@@ -91,6 +91,24 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(pedidos);
   }
 
+/* carrito */
+let contenedorMostrado = false;
+let carritoBtn = document.getElementById("carrito");
+
+carritoBtn.addEventListener("click", function() {
+  let contenedorCarrito = document.getElementById("carritoContenedor");
+  if (contenedorMostrado) {
+    contenedorCarrito.style.display = "none";
+  } else {
+    contenedorCarrito.style.display = "flex";
+  }
+  contenedorMostrado = !contenedorMostrado;
+});
+
+
+
+
+  
   /* BOTONES DE AGREGADO */
   let agregarCheeseBurger = document.querySelector("#agregarCheeseBurger");
   let agregarBarbaRoja = document.querySelector("#agregarBarbaRoja");
