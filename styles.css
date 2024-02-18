@@ -162,7 +162,7 @@ nav #btnNavegador li p:hover:before {
     width: 100%;
 }
 
-#carritoContenedor{
+#carritoContenedor {
     height: 80vh;
     background-color: white;
     border-radius: 8px;
@@ -174,6 +174,53 @@ nav #btnNavegador li p:hover:before {
     right: 2%;
     top: 15%;
     border: 1px solid black;
+    gap: 20px;
+    padding: 10px 0px;
+    overflow: auto;
+}
+
+.contenedor_total-pedidos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.imagenPedido {
+    width: 40%;
+}
+
+.imagenPedido img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.contenedor_descirpcion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 60%;
+    flex-direction: column;
+
+}
+
+.contenedor_descirpcion .trash {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: .5s;
+}
+
+.contenedor_descirpcion .trash:hover {
+    background-color: #eee1c9;
 }
 
 /* main */
@@ -242,7 +289,7 @@ main #contenedorProductos {
     justify-content: space-between;
 }
 
-.contenedorCruz{
+.contenedorCruz {
     position: absolute;
     border-radius: 50%;
     top: -5%;
@@ -260,7 +307,7 @@ main #contenedorProductos {
     transition: .5s;
 }
 
-.contenedorCruz p{
+.contenedorCruz p {
     color: white;
     font-family: 'Nordic Chance', sans-serif;
     font-size: 18px;
@@ -268,7 +315,7 @@ main #contenedorProductos {
     margin-top: 10px;
 }
 
-.contenedorCruz:hover{
+.contenedorCruz:hover {
     transform: scale(1.3) rotate(40deg);
 }
 
@@ -319,17 +366,19 @@ main #contenedorProductos {
     border-radius: 8px;
 }
 
-#cheese{
+#cheese {
     display: none;
     flex-direction: column;
     width: 100%;
 }
-#barbaRoja{
+
+#barbaRoja {
     display: none;
     flex-direction: column;
     width: 100%;
 }
-#comun{
+
+#comun {
     display: none;
     flex-direction: column;
     width: 100%;
@@ -354,12 +403,12 @@ main #contenedorProductos {
     border-radius: 8px;
 }
 
-.contenedort-imagen-producto {
+.contenedor-imagen-producto {
     border-radius: 8px;
     height: 100%;
 }
 
-.contenedort-imagen-producto img {
+.contenedor-imagen-producto img {
     border-radius: 8px;
     width: 160px;
     height: 160px;

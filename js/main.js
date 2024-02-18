@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   for (productoCombo of listaProductosCombo) {
     productoElemento = document.createElement("div");
     productoElemento.className = "carta-producto";
-    productoElemento.innerHTML = `<div class="contenedort-imagen-producto">
+    productoElemento.innerHTML = `<div class="contenedor-imagen-producto">
       <img src="${productoCombo.img}" alt="${productoCombo.nombre}" />
     </div>
     <div class="contenedor-titulo-descripcion">
@@ -58,9 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let nombreBurger;
   let precioBurger;
   let categoria;
+  let imagenBurger;
+  let descripcion;
 
   document.querySelector("#agregarBoton").addEventListener("click", agregar);
 
+  /* agregar los pedidos al carrito */
   function agregar() {
     listaExterna = [];
     botonesCheckbox.forEach((boton) => {
@@ -72,43 +75,73 @@ document.addEventListener("DOMContentLoaded", function () {
       boton.checked = false;
     });
 
+    /* condicional para definir que objeto es el seleccionado (se aceptan opiniones de como optimizarlo) */
+
     if (cheese) {
-      nombreBurger = "Cheese Burger";
-      precioBurger = 4100;
-      categoria = "Combo";
+      nombreBurger = cheeseBurgerCombo.nombre;
+      precioBurger = cheeseBurgerCombo.precio;
+      categoria = cheeseBurgerCombo.categoria;
+      imagenBurger = cheeseBurgerCombo.img;
+      descripcion = cheeseBurgerCombo.descripcion;
     } else if (barbaRoja) {
-      nombreBurger = "Barba Roja";
-      precioBurger = 4600;
-      categoria = "Combo";
+      nombreBurger = barbaRojaCombo.nombre;
+      precioBurger = barbaRojaCombo.precio;
+      categoria = barbaRojaCombo.categoria;
+      imagenBurger = barbaRojaCombo.img;
+      descripcion = barbaRojaCombo.descripcion;
     } else {
-      nombreBurger = "Clasica";
-      precioBurger = 3600;
-      categoria = "Combo";
+      nombreBurger = clasicaCombo.nombre;
+      precioBurger = clasicaCombo.precio;
+      categoria = clasicaCombo.categoria;
+      imagenBurger = clasicaCombo.img;
+      descripcion = clasicaCombo.descripcion;
     }
-    let hamburguesaPedida = new Producto(categoria, nombreBurger, precioBurger, "a", "a", listaExterna);
+    let hamburguesaPedida = new Producto(categoria, nombreBurger, precioBurger, imagenBurger, descripcion, listaExterna);
     pedidos.push(hamburguesaPedida);
-    console.log(nombreBurger);
-    console.log(pedidos);
+
+    localStorage.setItem("pedidos", JSON.stringify(pedidos));
+
+    let pedidosLS = JSON.parse(localStorage.getItem("pedidos"));
+    let contenido = "";
+    document.getElementById("carritoContenedor").innerHTML = "<h2>Pedidos</h2>";
+
+    /* crear los elementos del carrito en html */
+
+    for (const pedido of pedidosLS) {
+      contenido += `<div class="contenedor_total-pedidos">
+    <div class="imagenPedido">
+      <img src="${pedido.img}" alt="${pedido.nombre}">
+    </div>
+    <div class="contenedor_descirpcion">
+      <div class="${pedido.nombre}">
+        <h2>${pedido.nombre}</h2>
+      </div>
+      <div class="precio">
+        <p>${pedido.precio}</p>
+      </div>
+      <div class="trash">
+        <i class="fa-solid fa-trash"></i>
+      </div>
+    </div>
+  </div>`;
+    }
+    document.getElementById("carritoContenedor").innerHTML += contenido;
   }
 
-/* carrito */
-let contenedorMostrado = false;
-let carritoBtn = document.getElementById("carrito");
+  /* mostrar carrito */
+  let contenedorMostrado = false;
+  let carritoBtn = document.getElementById("carrito");
 
-carritoBtn.addEventListener("click", function() {
-  let contenedorCarrito = document.getElementById("carritoContenedor");
-  if (contenedorMostrado) {
-    contenedorCarrito.style.display = "none";
-  } else {
-    contenedorCarrito.style.display = "flex";
-  }
-  contenedorMostrado = !contenedorMostrado;
-});
+  carritoBtn.addEventListener("click", function () {
+    let contenedorCarrito = document.getElementById("carritoContenedor");
+    if (contenedorMostrado) {
+      contenedorCarrito.style.display = "none";
+    } else {
+      contenedorCarrito.style.display = "flex";
+    }
+    contenedorMostrado = !contenedorMostrado;
+  });
 
-
-
-
-  
   /* BOTONES DE AGREGADO */
   let agregarCheeseBurger = document.querySelector("#agregarCheeseBurger");
   let agregarBarbaRoja = document.querySelector("#agregarBarbaRoja");
@@ -159,6 +192,8 @@ carritoBtn.addEventListener("click", function() {
   }
 
   let botonCruz;
+
+  /* cerrar contenedor de ingredientes */
 
   for (botonCruz of cruzCerrar) {
     botonCruz.addEventListener("click", cerrarContenedorIngredientes);
