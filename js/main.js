@@ -77,6 +77,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* condicional para definir que objeto es el seleccionado (se aceptan opiniones de como optimizarlo) */
 
+    if (cheese || barbaRoja || clasica) {
+      alert("Se ha agregado al carrito");
+    }
+
     if (cheese) {
       nombreBurger = cheeseBurgerCombo.nombre;
       precioBurger = cheeseBurgerCombo.precio;
