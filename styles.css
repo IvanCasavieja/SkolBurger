@@ -171,12 +171,22 @@ nav #btnNavegador li p:hover:before {
     display: none;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     right: 2%;
-    top: 15%;
     border: 1px solid black;
+    top: 15%;
+    padding: 10px 0px;
+}
+
+#contenedorPedidosCarrito {
+    overflow: auto;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     gap: 20px;
     padding: 10px 0px;
-    overflow: auto;
 }
 
 .contenedor_total-pedidos {
@@ -187,6 +197,26 @@ nav #btnNavegador li p:hover:before {
     padding: 15px;
     border: 1px solid black;
     border-radius: 8px;
+}
+
+.finalizar___compra {
+    height: 5%;
+    width: 100px;
+    background-color: #eee1c9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.finalizar___compra:hover {
+    background-color: #ffa500;
+}
+
+.finalizar___compra:hover>p {
+    color: white;
 }
 
 .imagenPedido {
@@ -230,6 +260,11 @@ main {
     justify-content: center;
     height: 1000px;
     align-items: center;
+}
+
+/* extension */
+html.sr .widget {
+    visibility: hidden;
 }
 
 main #contenedorProductos {
@@ -384,6 +419,12 @@ main #contenedorProductos {
     width: 100%;
 }
 
+#cheddar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
 .contenedorCartasProductos {
     width: 100%;
     height: calc(100% - 40px);
@@ -397,10 +438,11 @@ main #contenedorProductos {
 
 .carta-producto {
     width: 550px;
-    height: 160px;
+    height: 180px;
     display: flex;
     padding: 5px;
     border-radius: 8px;
+    border: 1px solid black;
 }
 
 .contenedor-imagen-producto {
@@ -477,6 +519,90 @@ main #contenedorProductos {
     position: absolute;
     top: 800px;
     left: 200px;
+}
+
+#boxProductosPedidos {
+    position: absolute;
+    top: 40%;
+    width: 50%;
+    height: 40%;
+    border-radius: 8px;
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    z-index: 1111;
+}
+
+#boxProductosPedidos #productosPedidos {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.contenedor_total-pedidos_enviar {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenedor_total-pedidos_enviar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_total-pedidos_enviar img {
+    width: 100px;
+}
+
+.contenedorCruzPedidos {
+    position: absolute;
+    top: -7%;
+    right: -3%;
+    border-radius: 50%;
+    transform: rotate(40deg);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: url(img/cascovikingo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: .5s;
+}
+
+.contenedorCruzPedidos p {
+    color: white;
+    font-family: 'Nordic Chance', sans-serif;
+    font-size: 18px;
+    transform: rotate(-40deg);
+    margin-top: 10px;
+}
+
+.contenedorCruzPedidos:hover {
+    transform: scale(1.3) rotate(40deg);
+}
+
+#fondoNegro {
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 1001;
+    height: 200%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.322);
 }
 
 #contenedorCentralFooter {

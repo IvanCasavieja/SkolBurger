@@ -9,11 +9,12 @@
   <meta name="keywords" content="Simulador interactivo" />
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.cdnfonts.com/css/nordic-chance" rel="stylesheet" />
+  <script src="https://unpkg.com/scrollreveal"></script>
   <title>SkolBurger</title>
 </head>
 
 <body>
-  <header>
+  <header class="headline">
     <nav>
       <div id="centrarIcono">
         <a href="index.html">
@@ -74,7 +75,7 @@
             <li>XX:XX</li>
           </ul>
         </div>
-        <div class="horarios-dias">
+        <div class="horarios-dias widget">
           <ul>
             <li>Domingo</li>
             <li>XX:XX</li>
@@ -85,11 +86,19 @@
 
     <div id="carritoContenedor">
       <h2>Pedidos</h2>
+      <div id="contenedorPedidosCarrito">
 
-
+      </div>
+      <div class="finalizar___compra" id="finalizarCompraLlamar">
+        <p>Pedir</p>
+      </div>
     </div>
   </header>
-  <main>
+
+  <div id="fondoNegro">
+  </div>
+
+  <main class="body">
     <div id="contenedorProductos">
       <!-- filtro -->
 
@@ -149,8 +158,8 @@
             <p class="cerrarIngredientes">X</p>
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxLechugaBarbaRoja">Sin lechuga</label>
-            <input type="checkbox" id="checkboxLechugaBarbaRoja" name="lechuga" class="checkboxLechuga" />
+            <label for="checkboxBaconBarbaRoja">Sin bacon</label>
+            <input type="checkbox" id="checkboxBaconBarbaRoja" name="bacon" class="checkboxBacon" />
           </div>
           <div class="contenedor-ingrediente">
             <label for="checkboxTomateBarbaRoja">Sin tomate</label>
@@ -161,8 +170,8 @@
             <input type="checkbox" id="checkboxQuesoBarbaRoja" name="queso" class="checkboxQueso" />
           </div>
           <div class="contenedor-ingrediente">
-            <label for="checkboxHuevoBarbaRoja">Sin huevo</label>
-            <input type="checkbox" id="checkboxHuevoBarbaRoja" name="huevo" class="checkboxHuevo" />
+            <label for="checkboxCebollaBarbaRoja">Sin cebolla</label>
+            <input type="checkbox" id="checkboxCebollaBarbaRoja" name="cebolla" class="checkboxCebolla" />
           </div>
           <div class="contenedor-ingrediente">
             <label for="checkboxSalsaBarbaRoja">Sin salsa</label>
@@ -197,10 +206,24 @@
             <label for="checkboxHuevoComun">Sin huevo</label>
             <input type="checkbox" id="checkboxHuevoComun" name="huevo" class="checkboxHuevo" />
           </div>
-          <div class="contenedor-ingrediente">
-            <label for="checkboxSalsaComun">Sin salsa</label>
-            <input type="checkbox" id="checkboxSalsaComun" name="salsa" class="checkboxSalsa" />
+        </div>
+
+        <!-- cheddar -->
+
+        <div id="cheddar">
+          <div class="contenedorDescripcionIngredientes">
+            <h1 id="nombreClasica">Comun</h1>
+            <p>Pan de papa, medallón artesanal de 150 g de carne, queso cheddar y papas
+              fritas.</p>
           </div>
+          <div class="contenedorCruz">
+            <p class="cerrarIngredientes">X</p>
+          </div>
+          <div class="contenedor-ingrediente">
+            <label for="checkboxQuesoCheddar">Sin queso</label>
+            <input type="checkbox" id="checkboxQuesoCheddar" name="queso" class="checkboxQueso" />
+          </div>
+
         </div>
 
 
@@ -209,7 +232,7 @@
 
       <!-- contenedores de cartas productos combo -->
 
-      <div id="contenedorCombos" class="contenedorCartasProductos contenedor">
+      <div id="contenedorCombos" class="contenedorCartasProductos contenedor widget-list">
       </div>
 
       <!---------------------------------------------------------------------------------->
@@ -231,7 +254,18 @@
       <div class="centrar-gift">
         <img src="img/LqgM-unscreen.gif" alt="" />
       </div>
-  </main>
+
+      <div id="boxProductosPedidos">
+        <div id="productosPedidos">
+
+        </div>
+        <div class="contenedorCruzPedidos" id="contenedorCruzPedidos">
+          <p class="cerrarPedidos">X</p>
+        </div>
+      </div>
+
+    </main>
+
   <footer>
     <div id="contenedorCentralFooter">
       <div id="tituloFooter">
@@ -247,9 +281,9 @@
     </div>
   </footer>
 
-
   <script src="https://kit.fontawesome.com/fcf6a0acd3.js" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
