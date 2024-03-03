@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let cheeseBurgerCombo = new Producto("Combo", "CheeseBurger", 4100, "img/cheeseburger.webp", "Pan de papa, medallón artesanal de 150g de carne, queso cheedar, tomate, lechuga, huevo frito, salsa big mac y papas fritas.");
   let barbaRojaCombo = new Producto("Combo", "BarbaRoja", 4600, "img/barbaroja.webp", "Pan de papa, medallón artesanal de 150g de carne, queso cheddar, tiras de bacon, tomate, cebolla caramelizada, salsa barbacoa y papas fritas.");
   let clasicaCombo = new Producto("Combo", "Clasica", 3600, "img/clasica.jpg", "Pan de papa, medallón artesanal de 150 g de carne, lechuga, tomate, huevo, queso cheddar y papas fritas.");
-  let cheddarLover = new Producto("Combo", "Cheddar", 3200, "img/clasica.jpg", "Pan de papa, medallón artesanal de 150 g de carne, queso cheddar y papas fritas.");
+  let cheddarLover = new Producto("Combo", "Cheddar", 3200, "img/cheddar.jpg", "Pan de papa, medallón artesanal de 150 g de carne, queso cheddar y papas fritas.");
 
   /* array de productos para crear div */
   let listaProductosCombo = [cheeseBurgerCombo, barbaRojaCombo, clasicaCombo, cheddarLover];
@@ -52,7 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
   /* lista de ingredientes sin, para quitar ingredientes, si no te gusta el tomate ya sabes */
 
   let botonesCheckbox = document.querySelectorAll('input[type="checkbox"]');
+  let contadorCarrito = document.querySelector("#contadorCarrito");
   let pedidos = [];
+  let alert = "!";
 
   let cheese = false;
   let barbaRoja = false;
@@ -77,8 +79,13 @@ document.addEventListener("DOMContentLoaded", function () {
         listaExterna.push(nombreDeIngrediente);
       }
       boton.checked = false;
-      contenedorSinIngredientes.style.display="none";
+      contenedorSinIngredientes.style.display = "none";
     });
+
+    if (pedidos.length >= 0) {
+      contadorCarrito.style.display = "flex";
+      contadorCarrito.innerHTML = alert;
+    }
 
     /* condicional para definir que objeto es el seleccionado (se aceptan opiniones de como optimizarlo) */
 
@@ -184,7 +191,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Volver a cargar el carrito con la lista de pedidos actualizada
       crearCarrito(pedidos);
-      console.log(pedidos);
+      if (pedidos.length === 0) {
+        contadorCarrito.style.display = "none";
+      }
     }
 
     // Función para asociar el evento de clic a los elementos trash
@@ -196,8 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Llamar a la función para crear el carrito cuando se carga la página
     crearCarrito(pedidosLS);
-    console.log(pedidos);
-
+    /* Promesa */
     const obtenerProductos = () => {
       return new Promise((resolve) => {
         setTimeout(() => {
@@ -206,46 +214,49 @@ document.addEventListener("DOMContentLoaded", function () {
           3000;
       });
     };
-
+    /* Renderizar productos ya pedidos desde una promesa*/
     function renderProductos(x) {
-      let contenido = "";
-
+      let contenidoPedidos = ""; // Resetear el contenido del carrito
       for (const pedido of x) {
-        contenido += `
+        contenidoPedidos += `
         <div class="contenedor_total-pedidos_enviar">
-        <div class="imagenPedido_enviar">
-        <img src="${pedido.img}" alt="${pedido.nombre}">
-        </div>
-        <div class="${pedido.nombre}_enviar">
-        <h2>${pedido.nombre}</h2>
-        </div>
+          <div class="imagenPedido_enviar">
+            <img src="${pedido.img}" alt="${pedido.nombre}">
+          </div>
+          <div class="${pedido.nombre}_enviar">
+            <h2>${pedido.nombre}</h2>
+          </div>
         </div>`;
       }
-      document.querySelector("#productosPedidos").innerHTML = contenido;
+      document.querySelector("#productosPedidos").innerHTML = contenidoPedidos;
     }
 
-    obtenerProductos().then((data) => {
-      renderProductos(data);
-    });
-  }
+    /* Eventos para apertura y cierre de pedidos, inclusive box en negro */
+    document.querySelector("#finalizarCompraLlamar").addEventListener("click", abrirPedidos);
+    let contenedorPedidosFinal = document.querySelector("#boxProductosPedidos");
+    let fondoNegro = document.querySelector("#fondoNegro");
+    /* abrir */
+    function abrirPedidos() {
+      contenedorPedidosFinal.style.display = "flex";
+      fondoNegro.style.display = "flex";
+      obtenerProductos().then((data) => {
+        renderProductos(data);
+      });
+    }
 
-  document.querySelector("#finalizarCompraLlamar").addEventListener("click", abrirPedidos);
-  let contenedorPedidosFinal = document.querySelector("#boxProductosPedidos");
-
-  function abrirPedidos() {
-    contenedorPedidosFinal.style.display = "flex";
-  }
-
-  document.querySelector("#contenedorCruzPedidos").addEventListener("click", cerrarContenedorPedidos);
-
-  function cerrarContenedorPedidos() {
-    contenedorPedidosFinal.style.display = "none";
+    document.querySelector("#contenedorCruzPedidos").addEventListener("click", cerrarContenedorPedidos);
+    /* cerrar */
+    function cerrarContenedorPedidos() {
+      contenedorPedidosFinal.style.display = "none";
+      fondoNegro.style.display = "none";
+    }
   }
 
   /* mostrar carrito */
   let contenedorMostrado = false;
   let carritoBtn = document.getElementById("carrito");
 
+  /* mostrar carrito al presionar el boton de carro */
   carritoBtn.addEventListener("click", function () {
     let contenedorCarrito = document.getElementById("carritoContenedor");
     if (contenedorMostrado) {

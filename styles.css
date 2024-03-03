@@ -102,24 +102,18 @@ nav #btnNavegador li i:hover {
     color: black;
 }
 
-nav #btnNavegador li p {
-    position: relative;
-    cursor: pointer;
-    color: white;
-}
-
-nav #btnNavegador li p::before {
-    content: "";
+#btnNavegador li #contadorCarrito{
+    top: 10%;
+    right: 2%;
     position: absolute;
-    height: 1px;
-    background: white;
-    width: 0px;
-    bottom: 0px;
-    transition: .5s;
-}
-
-nav #btnNavegador li p:hover:before {
-    width: 100%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    color: white;
 }
 
 #horariosContenedor {
