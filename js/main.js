@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", function () {
         setTimeout(() => {
           resolve(pedidos);
         }),
-          3000;
+          1000;
       });
     };
     /* Renderizar productos ya pedidos desde una promesa*/
@@ -352,13 +352,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Detiene la propagación del evento para que no se cierre inmediatamente
     event.stopPropagation();
 
-    if (!horariosAbierto) {
-      horariosContenedor.style.display = "flex";
-      horariosAbierto = true;
-    } else {
-      horariosContenedor.style.display = "none";
-      horariosAbierto = false;
-    }
+    horariosContenedor.style.display = horariosAbierto ? "none" : "flex";
+    horariosAbierto = !horariosAbierto;
   }
 
   function cerrarHorario() {
